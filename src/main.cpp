@@ -79,70 +79,7 @@ void setup()
 
 void loop()
 {
-  
-  //   if (((digitalRead(Stepper_Sensor)==0) && (motor_sensed == false)) || (digitalRead(manual_pulse)==0 && (motor_sensed==false)))
-  // {
-  //   stepper.move(400);
-    
-  //   motor_sensed = true;
-  // }
-  // if (motor_sensed)
-  // { 
-  //   if (stepper.distanceToGo()==0)
-  //   { 
-  //     if (lock2==false)
-  //     {
-  //     digitalWrite(Cutter,HIGH);
-  //     lock2 = true;
-  //     }
-      
-      
-  //     if (start_cutter_timer==true)
-  //     {
-  //     cutter_timer= millis();
-  //     start_cutter_timer = false;
-  //     lock = true;
-  //     }
-  //     if (lock)
-  //     {
-  //       if (millis()-cutter_timer > 20)
-  //       {
-  //         digitalWrite(Cutter, LOW);
-  //         capture_timer = millis();
-  //         lock3 = true;
-  //         lock = false;
-  //       }
-        
-  //     }
-  //     if (lock3)
-  //     {
-  //       if (millis()-capture_timer>20)
-  //       {
-  //         motor_sensed = false;
-  //         lock3 = false;
-  //         lock = false;
-  //         lock2 = false;
-  //         start_cutter_timer = true;
-  //       }
-        
-  //     }
-      
-  //   }
-  // }
-  // if (stepper.isRunning())
-  // {
-  //   digitalWrite(12,HIGH);
-  // }
-  // else
-  // digitalWrite(12, LOW);
-  // //Serial.println("Current Pos:" + stepper.currentPosition());
-  //  //Serial.println("Target Pos:" + stepper.targetPosition());
-  
-  //   stepper.run();
-   
-   
-
-  
+  vTaskDelete(NULL);
 }
 
 void TaskStepperRun(void *pvParameters)  // This is a task.
