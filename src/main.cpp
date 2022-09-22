@@ -211,10 +211,10 @@ void TaskStepper(void *pvParameters)
   }
   if (stepper.isRunning())
   {
-    digitalWrite(4,HIGH);
+    digitalWrite(motor_signal,HIGH);
   }
   else
-  digitalWrite(4, LOW);
+  digitalWrite(motor_signal, LOW);
   //Serial.println("Current Pos:" + stepper.currentPosition());
    //Serial.println("Target Pos:" + stepper.targetPosition());
  
