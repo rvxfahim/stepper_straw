@@ -9,6 +9,7 @@
 #define Cutter_Sensor 11
 #define manual_pulse 5
 #define home 12
+#define motor_signal 4
 bool motor_sensed= false;
 bool lock = false;
 bool lock2 = false;
@@ -36,7 +37,7 @@ void setup()
   pinMode(home, INPUT_PULLUP);
   digitalWrite(Cutter, LOW);
    long initial_homing = 1 ;
-  pinMode(4, OUTPUT);
+  pinMode(motor_signal, OUTPUT);
     stepper.setMaxSpeed(100);
   	stepper.setAcceleration(50000);
     //stepper.setPinsInverted(true,true,true);
